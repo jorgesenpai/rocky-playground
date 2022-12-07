@@ -188,7 +188,7 @@ export class Activations {
       let output = Activations.SWISH.output(x);
       return output * (1 - output);
     },
-    compileToPy: (input: string) => `${input} * SIGMOID(${input})`
+    compileToPy: (input: string) => `(${input}) * SIGMOID(${input})`
   };
   public static LINEAR: ActivationFunction = {
     output: x => x,
